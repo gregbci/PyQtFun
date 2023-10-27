@@ -2,11 +2,12 @@
 
 To install dependencies and run applications:
 
-`conda env create -f ./environment.yml`
-
-`pip install .`
-
-`python ./hello.py`
+```
+conda env create -f ./environment.yml
+conda activate pyqtfun
+pip install .
+python ./hello.py
+```
 
 
 
