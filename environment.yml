@@ -1,0 +1,9 @@
+name: pyqtfun
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - liblsl
+  - twine
+  - black
+  - flake8

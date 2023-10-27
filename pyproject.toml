@@ -1,0 +1,37 @@
+[project]
+name = "pyqtfun"
+version = "0.0.0"
+description = "Learning PyQt for use with bci-essentials"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+	"bci-essentials",
+	"pyqt6",
+]
+
+[tool.setuptools.packages.find]
+exclude = [
+	"examples*",
+	"docs*"
+]
+
+[tool.black]
+py39 = true
+include = '\.pyi?$'
+exclude = '''
+/(
+	\.git
+	| \.hg
+	| \.mypy_cache
+	| \.tox
+	| \.venv
+	| _build
+	| buck-out
+	| build
+	| dist
+
+	# The following are specific to Black, you probably don't want those.
+	| blib2to3
+	| tests/data
+)/
+'''
