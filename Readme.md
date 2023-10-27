@@ -2,7 +2,7 @@
 
 To install dependencies and run applications:
 
-`conda create -f ./environment.yml`
+`conda env create -f ./environment.yml`
 
 `pip install .`
 
