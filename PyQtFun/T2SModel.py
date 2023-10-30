@@ -13,8 +13,10 @@ class T2SModel(QObject):
         self.trainingCount = 0
 
     def start_training(self):
-        # trigger an event later on when training is "complete"
+        # emit a signal when training "starts"
         self.trainingStarted.emit()
+        
+        # emit a signal when training is "complete" after a delay
         threading.Timer(1, self.training_complete).start()
 
     def training_complete(self):
