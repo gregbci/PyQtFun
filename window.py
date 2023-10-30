@@ -1,6 +1,4 @@
-import sys
-
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 
 # Subclass QMainWindow to customize your application's main window
@@ -19,11 +17,3 @@ class MainWindow(QMainWindow):
 
     def the_button_was_clicked(self):
         print("Clicked!")
-
-
-app = QApplication(sys.argv)
-
-window = MainWindow()
-window.show()
-
-app.exec()
