@@ -15,7 +15,7 @@ class T2SModel(QObject):
     def start_training(self):
         # emit a signal when training "starts"
         self.trainingStarted.emit()
-        
+
         # emit a signal when training is "complete" after a delay
         threading.Timer(1, self.training_complete).start()
 
