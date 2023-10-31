@@ -1,5 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication
+
 from .MainView import MainView
 from .TrainingController import TrainingController
 
