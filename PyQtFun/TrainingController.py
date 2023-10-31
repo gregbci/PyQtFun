@@ -5,7 +5,8 @@ from .MainView import MainView
 
 
 # Controller (or presenter if you prefer) that connects the view to a model.
-# In this case, the model would be something that actually knows how to train.
+# The model doesn't really exist in this example, see _train() which pretends to
+# do some training before emitting an event when done.
 #
 # More info here: https://wiki.qt.io/Model-View-Presenter(MVP)_Design_Pattern_in_Qt_Application
 #

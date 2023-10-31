@@ -7,10 +7,10 @@ from .TrainingController import TrainingController
 def start():
     app = QApplication(sys.argv)
 
-    # inject model into view
+    # inject view into controller
     view = MainView()
     controller = TrainingController(view)
 
-    # start application
+    # show view and begin Qt event loop
     controller.showView()
     app.exec()
