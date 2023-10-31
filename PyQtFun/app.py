@@ -1,16 +1,16 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from PyQtFun.MainWindow import MainWindow
-from PyQtFun.T2SModel import T2SModel
+from .MainView import MainView
+from .TrainingController import TrainingController
 
 
 def start():
     app = QApplication(sys.argv)
 
     # inject model into view
-    model = T2SModel()
-    win = MainWindow(model)
+    view = MainView()
+    controller = TrainingController(view)
 
     # start application
-    win.show()
+    controller.showView()
     app.exec()
