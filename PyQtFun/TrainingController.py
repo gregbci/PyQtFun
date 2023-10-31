@@ -24,17 +24,17 @@ class TrainingController(QObject):
     def initializeView(self):
         self.trainingStarted.connect(self.mainView.display_training_start)
         self.trainingCountChanged.connect(self.mainView.display_training_count)
-        self.mainView.button.clicked.connect(self.start_training)
+        self.mainView.button.clicked.connect(self._start_training)
 
     def showView(self):
         self.mainView.show()
 
-    def start_training(self):
+    def _start_training(self):
         # emit a signal when training "starts"
         self.trainingStarted.emit()
         self._train()
 
-    def training_complete(self):
+    def _training_complete(self):
         self.trainingCount += 1
         self.trainingCountChanged.emit(self.trainingCount)
 
@@ -43,4 +43,4 @@ class TrainingController(QObject):
         # that are coordinated by TrainingController.
 
         # Pretend to "train", then emit a signal when complete
-        threading.Timer(1, self.training_complete).start()
+        threading.Timer(1, self._training_complete).start()
